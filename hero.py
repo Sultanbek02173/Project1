@@ -41,26 +41,26 @@ class AirHero(SuperHero):
     
 # Земной герой
 
-class EarthlyHero(SuperHero):
+class EarthlyHero(AirHero):
     people = "EarthlyHero"
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
-        super().__init__(name, nickname, superpower, health_points, catchphrase)
-        self.fly = fly
-    def myltyhealth_points(self):
-        print("Health_points: ",self.health_points ** 2)
+    # def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
+    #     super().__init__(name, nickname, superpower, health_points, catchphrase)
+    #     self.fly = fly
+    # def myltyhealth_points(self):
+    #     print("Health_points: ",self.health_points ** 2)
     def flying(self):
         self.fly = False
         print("Fly in the True_phrase: ", self.fly)
         
 # Космический герой
 
-class SpaceHero(SuperHero):
+class SpaceHero(AirHero):
     people = "SpaceHero"
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
-        super().__init__(name, nickname, superpower, health_points, catchphrase)
-        self.fly = fly
-    def myltyhealth_points(self):
-        print("Health_points: ",self.health_points ** 2)
+    # def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
+    #     super().__init__(name, nickname, superpower, health_points, catchphrase)
+    #     self.fly = fly
+    # def myltyhealth_points(self):
+    #     print("Health_points: ",self.health_points ** 2)
     def flying(self):
         self.fly = True
         print("Fly in the True_phrase: ", self.fly)
