@@ -27,7 +27,7 @@ class SuperHero:
 # Воздушный герой
 
 class AirHero(SuperHero):
-    people = "AirHero"
+    AirHero = "AirHero"
     def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         SuperHero.__init__(self, name, nickname, superpower, health_points, catchphrase)
@@ -42,7 +42,7 @@ class AirHero(SuperHero):
 # Земной герой
 
 class EarthlyHero(AirHero):
-    people = "EarthlyHero"
+    EarthlyHero = "EarthlyHero"
     # def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
     #     super().__init__(name, nickname, superpower, health_points, catchphrase)
     #     self.fly = fly
@@ -55,7 +55,7 @@ class EarthlyHero(AirHero):
 # Космический герой
 
 class SpaceHero(AirHero):
-    people = "SpaceHero"
+    SpaceHero = "SpaceHero"
     # def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
     #     super().__init__(name, nickname, superpower, health_points, catchphrase)
     #     self.fly = fly
