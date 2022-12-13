@@ -28,11 +28,10 @@ class SuperHero:
 
 class AirHero(SuperHero):
     AirHero = "AirHero"
-    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage = 0, fly = False):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, fly = False):
         super().__init__(name, nickname, superpower, health_points, catchphrase)
         SuperHero.__init__(self, name, nickname, superpower, health_points, catchphrase)
         self.fly = fly
-        self.damage = damage
         
     def myltyhealth_points(self):
         print("Health_points: ",self.health_points ** 2)
@@ -68,14 +67,15 @@ class SpaceHero(AirHero):
         print("Fly in the True_phrase: ", self.fly)
 
 class Villain(AirHero):
+    def __init__(self, name, nickname, superpower, health_points, catchphrase, damage, fly=False):
+        super().__init__(name, nickname, superpower, health_points, catchphrase, fly)
+        self.damage = damage
     people = "monster"
     def gen_x(self):...
 
     
     def crit(self):
-        num = 300
-        self.damage = 2
-        print('Крит урон', num ** self.damage) 
+        print('Крит урон', self.damage ** 2) 
 
     
 
@@ -105,7 +105,7 @@ hero.flying()
 
 print()
 
-villain = Villain("Joker", "Joker", "Armor", 125, "sdfsdf")
+villain = Villain("Joker", "Joker", "Armor", 125, "sdfsdf", 100)
 print(villain.people)
 villain.nameHero()
 villain.myltyhealth_points()
