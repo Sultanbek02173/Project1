@@ -25,8 +25,8 @@ class Num5(Num1, Num2, Num3, Num4):
 
 
 
-num = Num5('Bob', 11)
-print(num)
-num.prim1()
-num.prim2()
+# num = Num5('Bob', 11)
+# print(num)
+# num.prim1()
+# num.prim2()
 
